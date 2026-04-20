@@ -1,9 +1,9 @@
 import os
-from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
 
-os.environ["YANDEX_CLOUD_API_KEY"] = "AQVNySLQcZQ5L_3HhUJvMwo-421kxWid2Wl2H2Eo"
-os.environ["YANDEX_CLOUD_FOLDER"] = "b1gc7ekb4govoh9ie7r8"
+load_dotenv()   
 
 
 def get_llm(model_name: str = "yandexgpt-5.1/latest", temperature: float = 0) -> ChatOpenAI: 
