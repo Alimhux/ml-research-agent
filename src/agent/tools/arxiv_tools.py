@@ -84,5 +84,5 @@ def _to_paper(result: arxiv.Result) -> Paper:
         pdf_url=result.pdf_url,
         authors=[author.name for author in result.authors],
         abstract=result.summary.strip(),
-        published_at=result.published.date().isoformat(),
+        published_at=result.published.date(),
     )
